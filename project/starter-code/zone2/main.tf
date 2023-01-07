@@ -24,20 +24,20 @@ locals {
 #    }
 #  }
 
-  module "vpc_west" {       #TODO Step5 Deselecciono modulo vpc_west
-   source     = "./modules/vpc"
-   cidr_block = "10.100.0.0/16"
+#   module "vpc_west" {       #TODO Step5 Deselecciono modulo vpc_west
+#    source     = "./modules/vpc"
+#    cidr_block = "10.100.0.0/16"
 
-   account_owner = local.name
-   name          = "${local.name}-project"
-   azs           = ["us-west-1a", "us-west-1c"]
-   private_subnet_tags = {
-     "kubernetes.io/role/internal-elb" = 1
-   }
-   public_subnet_tags = {
-     "kubernetes.io/role/elb" = 1
-   }
-  providers = {
-    aws = aws.usw1
-  }
- }
+#    account_owner = local.name
+#    name          = "${local.name}-project"
+#    azs           = ["us-west-1a", "us-west-1c"]
+#    private_subnet_tags = {
+#      "kubernetes.io/role/internal-elb" = 1
+#    }
+#    public_subnet_tags = {
+#      "kubernetes.io/role/elb" = 1
+#    }
+#   providers = {
+#     aws = aws.usw1
+#   }
+#  }
