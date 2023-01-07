@@ -11,7 +11,7 @@
    }
  }
 
-#   resource "aws_iam_role" "eks_cluster_role" {  #TODO Step 5 descomento este recurso
+#   resource "aws_iam_role" "eks_cluster_role" {   Step 5 descomento este recurso
 #    name               = "app-${var.name}-eks-cluster-role"
 #    assume_role_policy = data.aws_iam_policy_document.eks_assume_role_policy.json
 #  }
